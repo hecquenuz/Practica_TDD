@@ -16,4 +16,12 @@ public class Testcontador {
         Contador cc = new Contador(5);
         assertEquals(5, cc.getValor());
     }
+
+    @Test
+    public void testIncrementarContadorPorDefecto() {
+        Contador cc = new Contador();
+        cc.incrementa();
+
+        assertEquals(1, cc.getValor());
+    }
 }
