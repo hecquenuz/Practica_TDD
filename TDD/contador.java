@@ -1,8 +1,10 @@
 public class Contador {
 
     // Propiedades
+    private int inicial;
     private int valor;
     private int incremento;
+    private int limite;
 
     // Contructores
     public Contador(int i) {
@@ -18,6 +20,15 @@ public class Contador {
         this(i);
 
         this.incremento = j;
+
+    }
+
+    public Contador(int valor, int incremento, int limite) {
+        this.inicial = valor;
+        this.valor = valor;
+        this.incremento = incremento;
+        this.limite = limite;
+
     }
 
     // Metodos
@@ -26,9 +37,15 @@ public class Contador {
         return this.valor;
     }
 
-    public void incrementa() {
+    public boolean incrementa() {
+        this.valor += this.incremento;
 
-        this.valor = this.valor + this.incremento;
+        if (this.valor > this.limite) {
+            this.valor = this.inicial;
+            return true; // Si se ha superado el limite
+        } else {
+            return false;
+        }
 
     }
 

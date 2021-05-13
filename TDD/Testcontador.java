@@ -33,4 +33,12 @@ public class Testcontador {
 
         assertEquals(10, c.getValor());
     }
+
+    @Test
+    public void testIncrementarContadorconlimite() {
+        Contador c = new Contador(8, 8, 32);
+        c.incrementa();
+
+        assertEquals(16, c.getValor());
+    }
 }
