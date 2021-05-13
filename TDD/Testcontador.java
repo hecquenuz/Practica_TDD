@@ -40,4 +40,11 @@ public class Testcontador {
 
         assertEquals(true, c.incrementa());
     }
+
+    @Test
+    public void testIncrementarContadorconlimiteReiniciar() {
+        Contador c = new Contador(5, 6, 10);
+        c.incrementa();
+        assertEquals(5, c.getValor());
+    }
 }
