@@ -1,14 +1,17 @@
 public class Contador {
 
-    public Contador() {
+    private int valor;
 
+    public Contador(int i) {
+        this.valor = i;
+    }
+
+    public Contador() {
+        this(0);
     }
 
     public int getValor() {
 
-
-    return 0;
-    
+        return this.valor;
     }
 }
-

@@ -10,4 +10,10 @@ public class Testcontador {
         assertEquals(0, cc.getValor());
 
     }
+
+    @Test
+    public void testVerValorDelContadorConValorInicial5() {
+        Contador cc = new Contador(5);
+        assertEquals(5, cc.getValor());
+    }
 }
