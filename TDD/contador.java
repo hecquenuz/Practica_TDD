@@ -14,4 +14,9 @@ public class Contador {
 
         return this.valor;
     }
+
+    public void incrementa() {
+        this.valor++;
+
+    }
 }
