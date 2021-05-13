@@ -6,22 +6,31 @@ public class Testcontador {
 
     @Test
     public void testVerValorDelContadorPorDefecto() {
-        Contador cc = new Contador();
-        assertEquals(0, cc.getValor());
+        Contador c = new Contador();
+        assertEquals(0, c.getValor());
 
     }
 
     @Test
     public void testVerValorDelContadorConValorInicial5() {
-        Contador cc = new Contador(5);
-        assertEquals(5, cc.getValor());
+        Contador c = new Contador(5);
+        assertEquals(5, c.getValor());
     }
 
     @Test
     public void testIncrementarContadorPorDefecto() {
-        Contador cc = new Contador();
-        cc.incrementa();
+        Contador c = new Contador();
+        c.incrementa();
 
-        assertEquals(1, cc.getValor());
+        assertEquals(1, c.getValor());
+    }
+
+    @Test
+    public void testIncrementarContadorDe5A10() {
+
+        Contador c = new Contador(5, 5);
+        c.incrementa();
+
+        assertEquals(10, c.getValor());
     }
 }

@@ -1,6 +1,7 @@
 public class Contador {
 
     private int valor;
+    private int incremento;
 
     public Contador(int i) {
         this.valor = i;
